@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor - Learning</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>AI Tutor</h1>
+        </div>
+        <a href="/learning.html" id="learning-btn" class="button active">Learning</a>
+        <a href="/quiz.html" id="quiz-btn" class="button">Quiz</a>
+        <a href="/profile.html" id="profile-btn" class="button">Profile</a>
+        <a href="#" id="logout-btn" class="button">Logout</a> 
+    </div>
+
+    <div class="main-content-container"> 
+        <div class="learning-column left-column">
+            <div class="card learning-words-section">
+                <div class="card-header">
+                    <h2>Vocabulary List</h2>
+                </div>
+                <div class="card-body">
+                    <ul id="word-list">
+                        <li class="placeholder-item">Memuat kata-kata...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card random-facts-section">
+                <div class="card-header">
+                    <h3>Random Facts</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="random-facts-list">
+                        <li class="placeholder-item">Memuat fakta-fakta...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="learning-column right-column">
+            <div class="card chatbot-section">
+                <div class="card-header">
+                    <h2>Ask AI</h2>
+                </div>
+                <div class="card-body chatbot-body"> 
+                    <div id="chatbot-response">
+                        <div class="chatbot-message initial-message">Halo! Saya AI Tutor Anda. Ada yang bisa saya bantu tentang bahasa Prancis?</div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="user-input" placeholder="Ketik pertanyaan Anda di sini..." />
+                        <button id="send-message-btn">Send</button> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card ai-tutorial-section"> 
+                <div class="card-header">
+                    <h3>How To Use Ask AI</h3>
+                </div>
+                <div class="card-body">
+                    <p>Anda bisa bertanya berbagai hal kepada AI. Berikut adalah contoh pertanyaan:</p>
+                    <ul>
+                        <li>"Apa arti dari 'Bonjour'?"</li>
+                        <li>"Bagaimana cara menggunakan kata kerja 'être' dalam kalimat?"</li>
+                        <li>"Berikan contoh kalimat menggunakan 'Merci'."</li>
+                        <li>"Jelaskan tentang budaya Prancis."</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="word-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <h3 id="word-title"></h3>
+            <p><strong>Arti:</strong> <span id="word-meaning"></span></p>
+            <p><strong>Kapan Digunakan:</strong> <span id="word-usage"></span></p>
+            <div id="word-example-container"> 
+                <strong>Contoh Kalimat:</strong>
+                <ul id="word-example-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/learning.js"></script>
+</body>
+</html>

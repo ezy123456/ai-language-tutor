@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Bahasa Prancis | AI Tutor</title>
+    <link rel="stylesheet" href="/style.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <h1>AI Tutor</h1>
+        </div>
+        <a href="/learning.html" id="learning-btn" class="button">Learning</a>
+        <a href="/quiz.html" id="quiz-btn" class="button active">Quiz</a>
+        <a href="/profile.html" id="profile-btn" class="button">Profile</a>
+        <a href="#" id="logout-btn" class="button">Logout</a>
+    </div>
+
+    <div class="main-content-container">
+        <div class="quiz-column left-column">
+            <div class="card quiz-section">
+                <div class="card-header">
+                    <h2>Quiz</h2>
+                </div>
+                <div class="card-body">
+                    <div class="quiz-controls">
+                        <div class="control-group">
+                            <label for="quiz-length">Jumlah soal:</label>
+                            <select id="quiz-length">
+                                <option value="5">5 soal</option>
+                                <option value="10">10 soal</option>
+                                <option value="15">15 soal</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="quiz-level">Level:</label>
+                            <select id="quiz-level">
+                                <option value="pemula">Pemula</option>
+                                <option value="menengah">Menengah</option>
+                                <option value="mahir">Mahir</option>
+                            </select>
+                        </div>
+                        <button id="start-quiz-btn" class="button primary-button">Mulai Quiz</button>
+                    </div>
+
+                    <div id="error-message" class="text-danger mt-2"></div>
+
+                    <div id="quiz-container" class="quiz-questions-area">
+                        <p class="placeholder-text">Pilih jumlah dan level soal, lalu klik 'Mulai Quiz'.</p>
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button id="submit-btn" class="button success-button">Submit Jawaban</button>
+                        <button id="restart-quiz-btn" class="button secondary-button" style="display:none;">Mulai Ulang Quiz</button>
+                    </div>
+                    
+                    <div class="quiz-results">
+                        <p>Skor Anda: <span id="score">0</span></p>
+                        <div id="score-message">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-column right-column">
+            <div class="card leaderboard-section">
+                <div class="card-header">
+                    <h2>Leaderboard</h2>
+                </div>
+                <div class="card-body">
+                    <table id="leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Username</th>
+                                <th>Highest Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td colspan="3" class="placeholder-text">Memuat leaderboard...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="/quiz.js"></script>
+
+</body>
+</html>
